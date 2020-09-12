@@ -16,7 +16,7 @@ create_mainfest_file(){
     WSPATH=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16)
     echo "生成随机WebSocket路径：${WSPATH}"
     
-    cat >  ${SH_PATH}/IBMYes/v2ray-cloudfoundry/manifest.yml  << EOF
+    cat >  ${SH_PATH}/IBMYes/fackuay-cloudfoundry/manifest.yml  << EOF
     applications:
     - path: .
       name: ${IBM_APP_NAME}
@@ -24,7 +24,7 @@ create_mainfest_file(){
       memory: ${IBM_MEM_SIZE}M
 EOF
 
-    cat >  ${SH_PATH}/IBMYes/v2ray-cloudfoundry/v2ray/config.json  << EOF
+    cat >  ${SH_PATH}/IBMYes/fackuay-cloudfoundry/fackuay/configgg.json  << EOF
     {
         "inbounds": [
             {
@@ -63,7 +63,7 @@ clone_repo(){
     git clone https://github.com/CCChieh/IBMYes
     cd IBMYes
     git submodule update --init --recursive
-    cd v2ray-cloudfoundry/v2ray
+    cd fackuay-cloudfoundry/fackuay
     # Upgrade V2Ray to the latest version
     rm v2ray v2ctl
     
